@@ -1,4 +1,12 @@
 elmo
 ====
 
-A Symfony project created on July 17, 2017, 9:47 am.
+A Symfony project for test.
+
+(1)composer install
+
+(2)./bin/console doctrine:schema:create
+
+(3)./bin/console doctrine:schema:update --force
+
+(4)./bin/console server:run
