@@ -1,0 +1,27 @@
+security:
+    encoders:
+        AppBundle\Entity\User:
+            algorithm: bcrypt
+    providers:
+        our_db_provider:
+            entity:
+                class: AppBundle:User
+                property: username
+                # if you're using multiple entity managers
+                # manager_name: customer
+    firewalls:
+        main:
+            anonymous: ~
+            pattern:    ^/
+            #http_basic: ~
+            provider: our_db_provider
+            form_login:
+                success_handler: security.login_handler
+                login_path: login
+                check_path: login
+                csrf_token_generator: security.csrf.token_manager
+            logout:
+                path: /logout
+                target: /
+    access_control:
+        - { path: ^/admin, roles: ROLE_USER }

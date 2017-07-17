@@ -1,0 +1,11 @@
+   {% extends 'base.html.twig' %}
+   {% block body %}
+    {{ form_start(form) }}
+    {{ form_row(form.username,{'attr': {'class': 'form-control'}}) }}
+    {{ form_row(form.email,{'attr': {'class': 'form-control'}}) }}
+    {{ form_row(form.type,{'attr': {'class': 'form-control'}}) }}
+    {{ form_row(form.plainPassword.first,{'attr': {'class': 'form-control'}}) }}
+    {{ form_row(form.plainPassword.second,{'attr': {'class': 'form-control'}}) }}
+       <p style="margin-top: 10px"><button type="submit" class="btn btn-primary">Signup</button></p>
+{{ form_end(form) }}
+   {% endblock %}
