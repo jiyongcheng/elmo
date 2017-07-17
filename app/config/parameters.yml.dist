@@ -17,5 +17,5 @@ parameters:
 
     # A secret key that's used to generate certain security-related tokens
     secret: ThisTokenIsNotSoSecretChangeIt
-    redis_dsn_session: 127.0.0.1:6379
+    redis_address: 127.0.0.1:6379
     session_ttl: 1200
